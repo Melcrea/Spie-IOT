@@ -21,7 +21,7 @@ namespace Spie_IOT.Controllers
         {
             try
             {
-                var value = Convert.ToInt32(bodyModel.Data.Substring(2), 16);
+                var value = Convert.ToInt32(bodyModel.Data.Substring(2), 16)/10;
                 var code = bodyModel.Data.Remove(2);
 
                 var influxDBClient = InfluxDBClientFactory.Create("http://localhost:8086", "FAWjcsemACi9nLiSo2Pw0edaZGkuwD8XYb2VAeRytUDVNtP1Q_0po1DghOqXbIffk0GDInhNLPlV2M-6XJdRAA==");
@@ -29,11 +29,10 @@ namespace Spie_IOT.Controllers
                 using (var writeApi = influxDBClient.GetWriteApi())
                 {
                     var point = PointData.Measurement("temperature")
-                        .Tag("id", Guid.NewGuid().ToString())
-                        .Field("code", code)
+                        .Tag("code", code)
                         .Field("value", value);
 
-                    writeApi.WritePoint(point, "Test3", "Test");
+                    writeApi.WritePoint(point, "Test4", "Test");
                 }
 
                 influxDBClient.Dispose();
