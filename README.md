@@ -6,7 +6,7 @@ Dans un premier temps, veuillez suivre le guide du TP pour configurer l'espace d
 Puis veuillez cloner ce projet.
 Installer VisualStudio et sélectionner le projet précedemment téléchargé.
 
-Dans le fichier DataController.cs, veuillez définir à la ligne 27, votre propre clef API précdemment créée sur InfluxDB.
+Dans le fichier DataController.cs, veuillez définir à la ligne 27 votre propre clef API précédemment créée sur InfluxDB.
 
 Puis à la ligne 36, veuillez définir dans le deuxième emplacement de la méthode le nom du bucket et dans le troisième le nom de l'organisation.
 
@@ -18,4 +18,4 @@ Lancer le middleware sur VisualStudio via un appui sur le bouton portant le mêm
 
 ### Affichage
 
-Une fois, le panel créé, vous devriez le résultat présent sur le compte rendu.
+Une fois le panel créé vous devriez constater le graphique généré.
